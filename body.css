@@ -1,0 +1,156 @@
+/* Options panel */
+.wrapperOptions
+{
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  align-items: center;
+  height:100px;
+}
+
+#categoryName
+{
+  font-family: ArialRounded;
+  font-weight: bold;
+  font-size: 23px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+/* Sort panel */
+.sort.panel
+{
+  display: flex;
+  justify-content:flex-end;
+}
+
+.sort.button
+{
+  font-family: ArialRounded;
+  display: flex;
+  background-color: #F4F4F5;
+  border: 1px solid #0D1F2D;
+  border-radius: 7px;
+  padding: 5px 0px 5px 10px;
+  width: 150px;
+  font-size: 13px;
+}
+
+.category.sort
+{
+  color: #0D1F2D;
+  font-family: ArialRounded;
+  font-weight: bold;
+}
+
+.sort.arrow
+{
+  height: 6px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+
+/* Grid panel */
+
+.grid.panel
+{
+  display: flex;
+  justify-content: center;
+
+}
+.grid.panel img
+{
+  height: 22px;
+  margin: 4px;
+}
+
+.grid.panel img:hover
+{
+  cursor: pointer;
+}
+
+
+/* Main body with content */
+.main.content
+{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.category.menu
+{
+  justify-self:center;
+}
+
+.scrollmenu
+{
+  overflow: scroll;
+  white-space: nowrap;
+  height: 350px;
+  width: 140px;
+  overflow-x:hidden;
+  margin-bottom:40px;
+}
+
+.scrollmenu a
+{
+  display:inline-block;
+  color: #0D1F2D;
+  text-decoration: none;
+  margin-top: 5px;
+  font-size: 18px;
+}
+.scrollmenu a span
+{
+  position: relative;
+  color:#A52422;
+  font-size: 11px;
+  font-weight: bold;
+  bottom: 8px;
+  left:2px;
+}
+
+/* Scrollbar stile */
+.scrollmenu::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+.scrollmenu::-webkit-scrollbar-track {
+  background: #BCBCBC;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Handle */
+.scrollmenu::-webkit-scrollbar-thumb {
+  background: #A52422;
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+.scrollmenu::-webkit-scrollbar-thumb:active {
+  background: #0D1F2D;
+}
+
+
+/* Wallpaper images grid */
+
+.wallpaper.grid
+{
+  display: grid;
+  width: 95%;
+  grid-gap: 12px;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.wallpaper.grid img
+{
+  width: 100%;
+  height: 230px;
+}
+
+.wallpaper.grid wa
