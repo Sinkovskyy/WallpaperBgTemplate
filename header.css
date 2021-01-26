@@ -20,6 +20,10 @@
   font-size: 100%;
   font-family: ArialRoundedLight;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 /* Remove bottom's empty pixels*/
 img
 {

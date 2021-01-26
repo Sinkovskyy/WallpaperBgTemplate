@@ -138,6 +138,34 @@
   background: #0D1F2D;
 }
 
+/* Navigation button up */
+.upbutton
+{
+  display: block;
+  width: 55px;
+  margin:auto;
+}
+.upbutton>img
+{
+   position:fixed;
+   visibility:hidden;
+   bottom:50px;
+   height: 55px;
+}
+
+.upbutton:hover
+{
+  display: block;
+  width: 60px;
+  margin:auto;
+}
+.upbutton>img:hover
+{
+   cursor: pointer;
+   height: 60px;
+}
+
+
 
 /* Wallpaper images grid */
 

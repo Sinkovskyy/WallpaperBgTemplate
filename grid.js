@@ -57,12 +57,4 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
 });
