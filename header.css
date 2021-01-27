@@ -84,7 +84,7 @@ img
 /* Searchbar design */
 .search.input
 {
-  height: 27px;
+  height: 30px;
   width: 40%;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -101,7 +101,7 @@ img
 /* Button design */
 .search.button
 {
-  height: 30px;
+  height: 32px;
   width: 30px;
   background:#fff url('./Icons/searchIcon.png');
   background-size: 15px 15px;
