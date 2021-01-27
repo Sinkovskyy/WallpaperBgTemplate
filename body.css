@@ -79,7 +79,8 @@
   grid-template-columns: 20% 80%;
 }
 
-.category.menu
+
+.left.side
 {
   justify-self:center;
 }
@@ -166,7 +167,6 @@
 }
 
 
-
 /* Wallpaper images grid */
 
 .wallpaper.grid
@@ -186,4 +186,62 @@
 .wallpaper.grid img:hover
 {
   cursor: pointer;
+}
+
+/* Pagination */
+
+.pagination
+{
+  width: 97%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  margin-top: 50px;
+  margin-bottom:50px;
+}
+
+.pagin-wrapper
+{
+  display: flex;
+  align-items: center;
+}
+
+.pagin-main-panel
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagin-link
+{
+  display:block;
+  line-height:40px;
+  width:40px;
+  border: 1px solid #0D1F2D;
+  border-radius: 5px;
+  text-align: center;
+
+  color: #0D1F2D;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.pagin-link:hover
+{
+  background-color: #0D1F2D;
+  color:white;
+}
+
+.pagin-link.active
+{
+  background-color: #0D1F2D;
+  color:white;
+}
+
+.pagin-wrapper.forward
+{
+  display: flex;
+  justify-content: flex-end;
 }
