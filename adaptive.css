@@ -1,0 +1,71 @@
+@media (max-width:600px) {
+
+  /* Searchbar */
+  .searchbar
+  {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15%;
+  }
+
+.search.input
+  {
+    display: none;
+  }
+
+  .search.button
+  {
+    height: 22px;
+    width: 22px;
+    background:url('./Icons/whitesearchIcon.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+  }
+
+
+  .searchbar
+  {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15%;
+  }
+
+/* If seacrh button was clicked */
+.wrapper.active
+{
+  display: none;
+  justify-content: center;
+}
+.wrapper.active>.searchbar
+{
+  width: 100%;
+}
+.wrapper.active>.searchbar>.search.input
+{
+  width: 80%;
+  display: block;
+  border-radius: 0px;
+  background-color: rgba(13, 31, 45, 0);
+  color: white;
+}
+
+.cancel.button
+{
+  height: 22px;
+  width: 22px;
+  background:url('./Icons/cancel.png');
+  background-size:contain;
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor:pointer;
+}
+
+}
+
+
+
+
+
+
+}

@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="adaptive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="scroll.js"></script>
     <script type="text/javascript" src="grid.js"></script>
     <script type="text/javascript" src="pagination.js"></script>
-        <script type="text/javascript" src="sort_panel.js"></script>
+    <script type="text/javascript" src="sort_panel.js"></script>
+    <script type="text/javascript" src="searchbar.js"></script>
 
   </head>
   <body>
     <div class="header">
-      <div class="background"></div>
       <div class="wrapper">
         <div class="logo">
           <img id="logo" src="Icons\WallpaperBg.png" alt="">
@@ -29,16 +30,25 @@
           <div class="flexVertical">
             <div id="lg">En</div>
             <div class="dropdown-content">
-              <div class="lg_button_option"><a href="#">English</a><img src="Icons\English.png" alt=""></div>
-              <div class="lg_button_option"><a href="#">English</a><img src="Icons\English.png" alt=""></div>
-              <div class="lg_button_option"><a href="#">English</a><img src="Icons\English.png" alt=""></div>
-              <div class="lg_button_option"><a href="#">English</a><img src="Icons\English.png" alt=""></div>
+              <div class="lg_button_option"><a href="#"><img src="Icons\English.png" alt=""></a></div>
+              <div class="lg_button_option"><a href="#"><img src="Icons\Ukrainian.png" alt=""></a></div>
             </div>
           </div>
           <img src="Icons\arrow.png" id="arrow" alt="">
         </div>
       </div>
+      <div class="wrapper active">
+        <div class="searchbar active">
+          <button type="button" class="search button"name="button"><span class = "search button"></span></button>
+          <input class="search input" placeholder="Search"/>
+          <button type="button" class="cancel button"name="button"><span class ="cancel button"></span></button>
+        </div>
+      </div>
+
+
     </div>
+
+
     <div class="options panel">
         <div class="wrapperOptions">
           <div id="categoryName">Nature wallpaper HD</div>
@@ -219,7 +229,6 @@
         </div>
 
       </div>
-
     <div class="footer">
       <div class="license-area">© 2020–2025, WallpaperBg</div>
       <div class="filler-area">Desktop WallpaperBg, Backgrounds HD</div>
