@@ -135,6 +135,7 @@ img
 {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 /* For #lg and dropdown content */
 .flexVertical
