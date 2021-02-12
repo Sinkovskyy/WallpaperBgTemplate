@@ -1,4 +1,4 @@
-@media (max-width:600px) {
+@media (max-width:750px) {
 
   /* Searchbar */
   .searchbar
@@ -60,6 +60,7 @@
   background-repeat: no-repeat;
   cursor:pointer;
 }
+
 
 }
 

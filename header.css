@@ -20,6 +20,7 @@
   font-size: 100%;
   font-family: ArialRoundedLight;
   user-select: none;
+
 }
 html {
   scroll-behavior: smooth;
@@ -34,6 +35,7 @@ img
 .header
 {
   height: 55px;
+
 }
 
 /*Wrapper for header via grid */
@@ -49,6 +51,7 @@ img
   height: 55px;
   background-color: rgba(13, 31, 45, .91);
   backdrop-filter: blur(0.6em);
+  transition: visibility 0.2s,opacity 0.3s linear
 }
 
 /* Logo bar */
@@ -92,7 +95,7 @@ img
 .search.input
 {
   height: 30px;
-  width: 40%;
+  width: 60%;
   border-radius: 7px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -123,19 +126,24 @@ img
 {
   display:flex;
   align-items: center;
+  /*Fix disappear bug with header when i use animations */
+  transform: translate3d(0,0,0);
+
 }
 
-.lgbar:hover
+.lgwrapper
 {
-  cursor:pointer;
+  display: flex;
+  align-items: center;
 }
-
 /* For #lg and dropdown content */
 .flexVertical
 {
   position: relative;
   display: inline-block;
 }
+
+
 
 /* Language icon(text) */
 #lg
@@ -153,6 +161,7 @@ img
   margin-top: 2px;
   margin-left: 4px;
   transition-duration: 1s;
+  z-index: auto;
 }
 
 /* Context menu */
@@ -171,13 +180,13 @@ img
 }
 
 /* Context menu button option */
-.lgbar:hover .dropdown-content
+  .lgwrapper:hover .dropdown-content
 {
   visibility: visible;
   opacity:1;
 }
 
-.dropdown-content img:hover
+ .dropdown-content img:hover
 {
   filter: brightness(1.1);
 }
@@ -203,9 +212,9 @@ img
 }
 
 
-.lgbar:hover #arrow
+.lgwrapper:hover #arrow
 {
-  transform: rotate(180deg);
+  transform:rotate(-180deg);
   transition-duration: 0.8s;
 }
 
