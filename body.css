@@ -229,12 +229,12 @@
 
 .pagination
 {
-  width: 97%;
-  height: 50px;
+  width: 90%;
+  height: 100px;
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  margin-top: 50px;
-  margin-bottom:50px;
+  margin:0 auto;
+
 }
 
 .pagin-wrapper
@@ -249,7 +249,10 @@
   align-items: center;
   justify-content: center;
 }
-
+.pagin-main-panel a:first-child
+{
+  margin-left: 10px;
+}
 .pagin-link
 {
   display:block;
@@ -281,6 +284,14 @@
 {
   display: flex;
   justify-content: flex-end;
+}
+.pagin-link.forward
+{
+  margin: 0px;
+}
+.pagin-link.backward
+{
+  margin: 0px;
 }
 
 
