@@ -1,7 +1,7 @@
 
 function change_to_nine_grid($grid,$img,height)
 {
-  $grid.css({"grid-template-columns":"33% 33% 33%"});
+  $grid.css({"grid-template-columns":"33.3% 33.3% 33.3%"});
   $img.css({"height":height+"px"});
   $img.children().css({"height":height+"px"});
 }
@@ -21,7 +21,6 @@ function change_to_two_grid($grid,$img,height)
 
 
 $(document).ready(function(){
-
 
   $(".grid.panel").children().click(function(event){
       // Reset all grid icons color to blue

@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-  $(".sort.panel").click(function(){
-    var menu = $(".sort.panel>.dropdown-content");
-    var arrow = $(".sort.arrow");
+  $(".panel").click(function(){
+    var menu = $(this).children(".dropdown-content");
+    var arrow =  $(this).children(".button").children(".sort.arrow");
 
     if(menu.css("display") == "flex")
     {

@@ -20,41 +20,41 @@
 /* Sort panel */
 .sort.panel
 {
-  display: flex;
-  justify-content:flex-end;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 150px;
 }
 
-.sort.button
+.panel>.sort.button
 {
   font-family: ArialRounded;
   display: flex;
-  background-color: #F4F4F5;
-  border: 1px solid #0D1F2D;
+  background-color: white;
   padding: 5px 0px 5px 10px;
-  width: 150px;
-  font-size: 13px;
+  width:100%;
+  font-size: 12px;
   cursor:pointer;
   outline: none;
 }
 
-.sort.panel>.dropdown-content
+
+.panel>.dropdown-content
 {
-  display:flex;
+  display:none;
   flex-direction: column;
   position: absolute;
   background-color: white;
-  width: 150px;
+  width: 100%;
+  max-height: 140px;
+  overflow: auto;
   box-shadow: 0px 8px 7px 2px rgba(0,0,0,0.2);
-  right: 303px;
-  top:118px;
 }
 
-
-.category.sort
+.lg_button_option>a
 {
-  color: #0D1F2D;
-  font-family: ArialRounded;
-  font-weight: bold;
+  margin:0 auto;
 }
 
 .sort.arrow
@@ -66,6 +66,27 @@
   transition-duration: 0.8s;
 }
 
+/* Category panel */
+.category.panel
+{
+  display: none;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 150px;
+}
+
+.panel>.category.button
+{
+  font-family: ArialRounded;
+  display: flex;
+  background-color: white;
+  padding: 5px 0px 5px 10px;
+  width: 100%;
+  font-size: 12px;
+  cursor:pointer;
+  outline: none;
+
+}
 
 /* Grid panel */
 
@@ -118,7 +139,7 @@
   margin-top: 5px;
   font-size: 18px;
 }
-.scrollmenu a span
+.lg_button_option>a>span
 {
   position: relative;
   color:#A52422;
@@ -186,10 +207,11 @@
 
 .wallpaper.grid
 {
+  margin: 0;
   display: grid;
   width: 95%;
   grid-gap: 12px;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
 }
 
 .wallpaper.grid img

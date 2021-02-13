@@ -166,7 +166,7 @@ img
 }
 
 /* Context menu */
-.dropdown-content
+.lgbar .dropdown-content
 {
   display:flex;
   flex-direction: column;
