@@ -72,20 +72,8 @@ function change_mobile_grid_state(tpgrid,grid,img,height)
   }
 }
 
-
-
-
-$(document).ready(function(){
-  var tpgrid, grid, img, width, height;
-
-  grid = $(".wallpaper.grid");
-  img = grid.children();
-
-  $(window).resize(function(){
-
-    width = $(window).width();
-    height = $(window).height();
-
+function upgrade_grid(tpgrid,grid,img,height,width)
+{
     if(width > 800){
       $(".grid.panel").children().each(function(){
           if($(this).attr("src").search("red") + 1)
@@ -103,9 +91,31 @@ $(document).ready(function(){
             change_mobile_grid_state(tpgrid,grid,img,height);
           }
       });
-    }
+  }
+}
 
 
+
+
+$(document).ready(function(){
+  var tpgrid, grid, img, width, height;
+
+  grid = $(".wallpaper.grid");
+  img = grid.children();
+  width = $(window).width();
+  height = $(window).height();
+
+  $(".grid.panel").children().last()
+  .attr("src","Icons/red_" + $(".grid.panel").children().last().attr("id") + "_grid.png");
+
+  upgrade_grid(tpgrid,grid,img,height,width);
+
+
+  $(window).resize(function(){
+
+    width = $(window).width();
+    height = $(window).height();
+    upgrade_grid(tpgrid,grid,img,height,width);
   });
 
 
