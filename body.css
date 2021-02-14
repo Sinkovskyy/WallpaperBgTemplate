@@ -39,6 +39,12 @@
   outline: none;
 }
 
+.panel>.button>.category.sort
+{
+  font-weight: bold;
+  font-size: 9pt;
+}
+
 
 .panel>.dropdown-content
 {
