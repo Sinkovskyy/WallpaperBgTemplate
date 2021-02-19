@@ -111,7 +111,7 @@ img
 {
   height: 32px;
   width: 30px;
-  background:#fff url('./icons/searchIcon.png');
+  background:#fff url('../icons/searchIcon.png');
   background-size: 15px 15px;
   background-position: center;
   background-repeat: no-repeat;
