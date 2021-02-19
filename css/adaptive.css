@@ -17,7 +17,7 @@
     {
       height: 22px;
       width: 22px;
-      background:url('./Icons/whitesearchIcon.png');
+      background:url('./icons/whitesearchIcon.png');
       background-repeat:no-repeat;
       background-size:contain;
     }
@@ -57,7 +57,7 @@
   {
     height: 22px;
     width: 22px;
-    background:url('./Icons/cancel.png');
+    background:url('./icons/cancel.png');
     background-size:contain;
     background-size: 15px 15px;
     background-position: center;
