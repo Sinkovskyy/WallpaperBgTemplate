@@ -1,0 +1,43 @@
+
+
+/* Body */
+.main_content
+{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-top: 40px;
+}
+
+.left.side
+{
+  display: grid;
+  grid-template-rows: 40% 10% 50%;
+}
+
+.left.side>img
+{
+  height: 550px;
+  width: 90%;
+  margin-left: 7%;
+}
+
+.right.side
+{
+  display:flex;
+  flex-direction: column;
+}
+
+.right.side>.gui-heading
+{
+  margin: 0 auto;
+  font-weight:bold;
+  font-size: 17pt;
+}
+
+.recommended.images.container img
+{
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top:20px;
+}
