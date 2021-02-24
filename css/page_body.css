@@ -1,0 +1,148 @@
+
+
+/* Body */
+.main_content
+{
+  display:flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+
+/* Image part */
+
+.top.side
+{
+  margin: 0 auto;
+  display: block;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  "image image"
+  "tags download";
+}
+
+/* Main image */
+.main.wallpaper
+{
+  grid-area: image;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+
+.tags-area
+{
+  grid-area: tags;
+  width: 100%;
+}
+
+
+
+
+
+
+/* Button tag */
+.tags-area .tag
+{
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  border: 1px solid #A52422;
+  width: 29%;
+  max-width: 100px;
+  height: 23px;
+  margin-right: 3%;
+  margin-top: 15px;
+  color:#A52422;
+  font-size: 12pt;
+  font-weight: bold;
+  cursor:pointer;
+  outline: 0;
+}
+
+.tags-area .tag:hover
+{
+  border-width: 2px;
+}
+
+/* Download button */
+.download-area
+{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.download-button
+{
+  display:block;
+  background-color: #0D1F2D;
+  border:none;
+  border-radius: 20px;
+  border:1px solid #0D1F2D;
+  color:white;
+  font-weight: bold;
+  font-size: 13pt;
+  width: 60%;
+  max-width: 150px;
+  height: 30px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  display:grid;
+  grid-template-columns: 30% 70%;
+  margin: 0 auto;
+  cursor:pointer;
+  outline: 0;
+}
+.download-button:hover
+{
+  background-color: #183952;
+  border:1px solid #183952;
+}
+
+
+.download-icon
+{
+  background:url("../icons/white-direct-download.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  margin: 0 auto;
+}
+
+.download-text
+{
+  text-align: left;
+}
+
+
+
+
+/* Bottom */
+
+.bottom.side
+{
+  display:flex;
+  flex-direction: column;
+}
+
+.bottom.side>.gui-heading
+{
+  margin: 0 auto;
+  font-weight:bold;
+  font-size: 17pt;
+}
+
+.recommended.images.container img
+{
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top:20px;
+}
