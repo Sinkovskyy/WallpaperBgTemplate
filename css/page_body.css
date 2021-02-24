@@ -73,7 +73,8 @@
 {
   align-items: center;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 
@@ -88,14 +89,13 @@
   font-weight: bold;
   font-size: 13pt;
   width: 60%;
-  max-width: 150px;
+  max-width: 170px;
   height: 30px;
   line-height: 30px;
   align-items: center;
-  text-align: center;
   display:grid;
   grid-template-columns: 30% 70%;
-  margin: 0 auto;
+  margin-right: 10%;
   cursor:pointer;
   outline: 0;
 }
@@ -127,6 +127,7 @@
 
 .bottom.side
 {
+  margin-top: 40px;
   display:flex;
   flex-direction: column;
 }
@@ -135,7 +136,8 @@
 {
   margin: 0 auto;
   font-weight:bold;
-  font-size: 17pt;
+  font-size: 22pt;
+  margin-bottom: 20px;
 }
 
 
@@ -149,7 +151,7 @@
 {
   width: 95%;
   height: auto;
-
   margin: 0 auto;
   margin-top:20px;
+  cursor: pointer;
 }
