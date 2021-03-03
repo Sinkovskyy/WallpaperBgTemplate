@@ -2,17 +2,36 @@
 function change_to_nine_grid($grid,$img)
 {
   $grid.css({"grid-template-columns":"" + 100/3 + "%" + 100/3 + "%" + 100/3 + "%"});
-  $img.css({"height":"auto"});
+  $img.each(function(){
+  $(this).css({"height": $(this).children().children().css("height")});
+  });
+  
+  $img.children().children().css({"transform":"translate(-50%,-50%)"});
+  $img.children().children().css({"position":"absolute"});
 }
 function change_to_four_grid($grid,$img)
 {
   $grid.css({"grid-template-columns":"50% 50%"});
-  $img.css({"height":"auto"});
+  $img.each(function()
+{
+  $(this).css({"height": $(this).children().children().css("height")});
+
+});
+  $img.children().children().css({"transform":"translate(-50%,-50%)"});
+  $img.children().children().css({"position":"absolute"});
+
 }
 function change_to_two_grid($grid,$img)
 {
   $grid.css({"grid-template-columns":"100%"});
-  $img.css({"height":"auto"});
+  $img.each(function()
+{
+  $(this).css({"height": $(this).children().children().css("height")});
+
+});
+  $img.children().children().css({"transform":"translate(-50%,-50%)"});
+  $img.children().children().css({"position":"absolute"});
+
 }
 
 
@@ -20,13 +39,17 @@ function change_to_two_grid($grid,$img)
 function change_to_nine_grid_mobile($grid,$img,height)
 {
   $grid.css({"grid-template-columns":"" + 100/3 + "%" + 100/3 + "%" + 100/3 + "%"});
-  $img.css({"height":height/3+"px"});
+  $img.css({"height":height/3+"px"})
+  $img.children().children().css({"transform":"translate(-50%,-50%)"});
+  $img.children().children().css({"position":"absolute"});
 
 }
 function change_to_four_grid_mobile($grid,$img,height)
 {
   $grid.css({"grid-template-columns":"50% 50%"});
   $img.css({"height":height/2+"px"});
+  $img.children().children().css({"transform":"translate(-50%,-50%)"});
+  $img.children().children().css({"position":"absolute"});
 
 }
 function change_to_two_grid_mobile($grid,$img,height)
@@ -35,6 +58,8 @@ function change_to_two_grid_mobile($grid,$img,height)
   hheader = parseInt(hheader, 10);
   $grid.css({"grid-template-columns":"100%"});
   $img.css({"height":height - hheader+"px"});
+  $img.children().children().css({"transform":"translate(-50%,-50%)"});
+  $img.children().children().css({"position":"absolute"});
 }
 
 //Chenge grid size

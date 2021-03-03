@@ -239,20 +239,25 @@ a>span
 
 .wallpaper
 {
-  position: static;
+  position: relative;
   width: 100%;
   height: auto;
-
+  cursor: pointer;
+  overflow: hidden;
 }
 .wallpaper.grid img
 {
   width: 100%;
   height: auto;
+  top: 50%;
+  left: 50%;
+  transition: width 0.5s;
 }
 
 .wallpaper.grid img:hover
 {
-  cursor: pointer;
+  width: 115%;
+  height: auto;
 }
 
 /* Pagination */
