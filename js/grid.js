@@ -1,110 +1,170 @@
-//For pc version
-function change_to_nine_grid($grid,$img)
+function img_scale_hover($img,hover,unhover = "100%")
 {
+  $img.css({
+    "height":"auto",
+    "width":unhover
+  });
+  $img.mouseover(function(){
+    $(this).css({
+      "width":hover,
+      "height":"auto"
+    });
+  }).mouseleave(function(){
+    $(this).css({
+      "width":unhover,
+      "height":"auto"
+    });
+  });
+}
+
+function img_mobile_scale_hover($img,hover,unhover = "100%")
+{
+  $img.css({
+    "width":"auto",
+    "height":hover
+});
+  $img.mouseover(function(){
+    $(this).css({
+      "height":hover,
+      "width":"auto"
+    });
+  }).mouseleave(function(){
+    $(this).css({
+      "height":unhover,
+      "width":"auto"
+    });
+  });
+
+}
+
+
+//For pc version
+function change_to_nine_grid($grid,$container)
+{
+  var $img = $container.children().children();
+
   $grid.css({"grid-template-columns":"" + 100/3 + "%" + 100/3 + "%" + 100/3 + "%"});
-  $img.each(function(){
+  img_scale_hover($img,"115%");
+  $container.each(function(){
   $(this).css({"height": $(this).children().children().css("height")});
   });
-  
-  $img.children().children().css({"transform":"translate(-50%,-50%)"});
-  $img.children().children().css({"position":"absolute"});
+
+  $img.css({"transform":"translate(-50%,-50%)"});
+  $img.css({"position":"absolute"});
 }
-function change_to_four_grid($grid,$img)
+function change_to_four_grid($grid,$container)
 {
+  var $img = $container.children().children();
   $grid.css({"grid-template-columns":"50% 50%"});
-  $img.each(function()
+  $container.each(function()
 {
   $(this).css({"height": $(this).children().children().css("height")});
 
 });
-  $img.children().children().css({"transform":"translate(-50%,-50%)"});
-  $img.children().children().css({"position":"absolute"});
+  $container.children().children().css({"transform":"translate(-50%,-50%)"});
+  $container.children().children().css({"position":"absolute"});
 
+  img_scale_hover($img,"105%");
 }
-function change_to_two_grid($grid,$img)
+
+
+
+
+function change_to_two_grid($grid,$container)
 {
+  var $img = $container.children().children();
   $grid.css({"grid-template-columns":"100%"});
-  $img.each(function()
+  $container.each(function()
 {
   $(this).css({"height": $(this).children().children().css("height")});
 
 });
-  $img.children().children().css({"transform":"translate(-50%,-50%)"});
-  $img.children().children().css({"position":"absolute"});
+  $container.children().children().css({"transform":"translate(-50%,-50%)"});
+  $container.children().children().css({"position":"absolute"});
 
+  img_scale_hover($img,"100%");
 }
 
 
 //For mobile version
-function change_to_nine_grid_mobile($grid,$img,height)
+function change_to_nine_grid_mobile($grid,$container,height)
 {
+  console.log("mobile");
+  var $img = $container.children().children();
   $grid.css({"grid-template-columns":"" + 100/3 + "%" + 100/3 + "%" + 100/3 + "%"});
-  $img.css({"height":height/3+"px"})
-  $img.children().children().css({"transform":"translate(-50%,-50%)"});
-  $img.children().children().css({"position":"absolute"});
+  $container.css({"height":height/3+"px"})
+  $container.children().children().css({"transform":"translate(-50%,-50%)"});
+  $container.children().children().css({"position":"absolute"});
 
+  img_mobile_scale_hover($img,"115%");
 }
-function change_to_four_grid_mobile($grid,$img,height)
+function change_to_four_grid_mobile($grid,$container,height)
 {
+  var $img = $container.children().children();
   $grid.css({"grid-template-columns":"50% 50%"});
-  $img.css({"height":height/2+"px"});
-  $img.children().children().css({"transform":"translate(-50%,-50%)"});
-  $img.children().children().css({"position":"absolute"});
+  $container.css({"height":height/2+"px"});
+  $container.children().children().css({"transform":"translate(-50%,-50%)"});
+  $container.children().children().css({"position":"absolute"});
 
+  img_mobile_scale_hover($img,"105%");
 }
-function change_to_two_grid_mobile($grid,$img,height)
+function change_to_two_grid_mobile($grid,$container,height)
 {
-  var hheader = $(".header").css("height");
+
+  var hheader = $(".header").css("height"),
+      $img = $container.children().children();
   hheader = parseInt(hheader, 10);
   $grid.css({"grid-template-columns":"100%"});
-  $img.css({"height":height - hheader+"px"});
-  $img.children().children().css({"transform":"translate(-50%,-50%)"});
-  $img.children().children().css({"position":"absolute"});
+  $container.css({"height":height - hheader+"px"});
+  $container.children().children().css({"transform":"translate(-50%,-50%)"});
+  $container.children().children().css({"position":"absolute"});
+
+  img_mobile_scale_hover($img,"100%");
 }
 
 //Chenge grid size
-function change_grid_state(tpgrid,grid,img)
+function change_grid_state(tpgrid,grid,container)
 {
   if(tpgrid == "nine")
   {
-    change_to_nine_grid(grid,img);
+    change_to_nine_grid(grid,container);
   }
   else if(tpgrid == "four")
   {
-    change_to_four_grid(grid,img);
+    change_to_four_grid(grid,container);
   }
   else
   {
-    change_to_two_grid(grid,img);
+    change_to_two_grid(grid,container);
   }
 }
 
 //Chenge grid size for mobile version
-function change_mobile_grid_state(tpgrid,grid,img,height)
+function change_mobile_grid_state(tpgrid,grid,container,height)
 {
   // Change grid state
   if(tpgrid == "nine")
   {
-    change_to_nine_grid_mobile(grid,img,height);
+    change_to_nine_grid_mobile(grid,container,height);
   }
   else if(tpgrid == "four")
   {
-    change_to_four_grid_mobile(grid,img,height);
+    change_to_four_grid_mobile(grid,container,height);
   }
   else
   {
-    change_to_two_grid_mobile(grid,img,height);
+    change_to_two_grid_mobile(grid,container,height);
   }
 }
 
-function upgrade_grid(tpgrid,grid,img,height,width)
+function upgrade_grid(tpgrid,grid,container,height,width)
 {
     if(width > 800){
       $(".grid.panel").children().each(function(){
           if($(this).attr("src").search("red") + 1)
           {
             tpgrid = $(this).attr("id");
-            change_grid_state(tpgrid,grid,img);
+            change_grid_state(tpgrid,grid,container);
           }
       });
     }
@@ -113,7 +173,7 @@ function upgrade_grid(tpgrid,grid,img,height,width)
           if($(this).attr("src").search("red") + 1)
           {
             tpgrid = $(this).attr("id");
-            change_mobile_grid_state(tpgrid,grid,img,height);
+            change_mobile_grid_state(tpgrid,grid,container,height);
           }
       });
   }
@@ -123,24 +183,24 @@ function upgrade_grid(tpgrid,grid,img,height,width)
 
 
 $(document).ready(function(){
-  var tpgrid, grid, img, width, height;
+  var tpgrid, grid, container, width, height;
 
   grid = $(".wallpaper.grid");
-  img = grid.children();
+  container = grid.children();
   width = $(window).width();
   height = $(window).height();
 
   $(".grid.panel").children().last()
   .attr("src","Icons/red_" + $(".grid.panel").children().last().attr("id") + "_grid.png");
 
-  upgrade_grid(tpgrid,grid,img,height,width);
+  upgrade_grid(tpgrid,grid,container,height,width);
 
 
   $(window).resize(function(){
 
     width = $(window).width();
     height = $(window).height();
-    upgrade_grid(tpgrid,grid,img,height,width);
+    upgrade_grid(tpgrid,grid,container,height,width);
   });
 
 
@@ -163,11 +223,11 @@ $(document).ready(function(){
 
       if(width > 800)
       {
-        change_grid_state(tpgrid,grid,img);
+        change_grid_state(tpgrid,grid,container);
       }
       else
       {
-        change_mobile_grid_state(tpgrid,grid,img,height);
+        change_mobile_grid_state(tpgrid,grid,container,height);
       }
 
   });
