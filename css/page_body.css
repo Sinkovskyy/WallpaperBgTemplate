@@ -150,12 +150,12 @@
 
 .recommended.images.container .wallpaper
 {
-
   position: relative;
   overflow: hidden;
 }
 .recommended.images.container img
 {
+  transition: width 0.5s;
   width: 100%;
   left:50%;
   top:50%;
