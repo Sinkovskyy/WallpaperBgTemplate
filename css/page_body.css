@@ -144,14 +144,19 @@
 .recommended.images.container
 {
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:15px;
 }
 
+.recommended.images.container .wallpaper
+{
+
+  position: relative;
+  overflow: hidden;
+}
 .recommended.images.container img
 {
-  width: 95%;
-  height: auto;
-  margin: 0 auto;
-  margin-top:20px;
-  cursor: pointer;
+  width: 100%;
+  left:50%;
+  top:50%;
 }

@@ -126,21 +126,21 @@
     grid-gap:0px;
   }
 
-  .wallpaper.grid>.wallpaper
+  .right.side .wallpaper.grid>.wallpaper
   {
     width: 100%;
     height: 88px;
 
 
   }
-  .wallpaper.grid img
+  .right.side .wallpaper.grid img
   {
   width: auto;
   height: 100%;
   transition: height 0.5s;
   }
 
-  .wallpaper.grid img:hover
+  .right.side .wallpaper.grid img:hover
   {
     height: 115%;
     width: auto;

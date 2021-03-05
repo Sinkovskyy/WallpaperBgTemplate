@@ -1,0 +1,13 @@
+
+@media (max-width:800px)
+{
+
+   /* Similar wallpapers grid  */
+  .recommended.images.container
+  {
+    grid-template-columns: 100%;
+    grid-gap:0px;
+  }
+
+
+}

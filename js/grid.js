@@ -53,7 +53,7 @@ function change_to_nine_grid($grid,$container)
   var $img = $container.children().children();
 
   // Change grid template
-  $grid.css({"grid-template-columns":"" + 100/3 + "%" + 100/3 + "%" + 100/3 + "%"});
+  $grid.css({"grid-template-columns":"" + "1fr" + " 1fr" + " 1fr"});
 
 
     //Scale image size when hover on them//Scale image size when hover on them
@@ -204,8 +204,25 @@ function change_mobile_grid_state(tpgrid,grid,container,height)
   }
 }
 
-function upgrade_grid(tpgrid,grid,container,height,width)
+function upgrade_grid(grid,container,height,width,tpgrid)
 {
+
+    // For page.html
+    if(!$(".grid.panel")[0])
+    {
+      if(width <= 800)
+      {
+        change_mobile_grid_state(tpgrid,grid,container,height);
+      }
+      else
+      {
+        tpgrid = "nine"
+        change_grid_state(tpgrid,grid,container);
+      }
+
+    }
+
+    // For main.html
     if(width > 800){
       $(".grid.panel").children().each(function(){
           if($(this).attr("src").search("red") + 1)
@@ -230,6 +247,8 @@ function upgrade_grid(tpgrid,grid,container,height,width)
 
 
 $(document).ready(function(){
+
+
   var tpgrid, grid, container, width, height;
 
   grid = $(".wallpaper.grid");
@@ -241,14 +260,14 @@ $(document).ready(function(){
   $(".grid.panel").children().last()
   .attr("src","Icons/red_" + $(".grid.panel").children().last().attr("id") + "_grid.png");
 
-  upgrade_grid(tpgrid,grid,container,height,width);
+  upgrade_grid(grid,container,height,width);
 
   // Resize trigger
   $(window).resize(function(){
 
     width = $(window).width();
     height = $(window).height();
-    upgrade_grid(tpgrid,grid,container,height,width);
+    upgrade_grid(grid,container,height,width);
   });
 
 
