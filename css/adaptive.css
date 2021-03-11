@@ -41,7 +41,7 @@
   {
     width: 90%;
     display: flex;
-    justify-content:flex-end;
+    justify-content:center;
     margin:0;
   }
   .wrapper.active>.searchbar>.search.input
