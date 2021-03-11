@@ -22,7 +22,7 @@ function img_scale_hover($img,hover,unhover = "100%")
 
 }
 
-function img_mobile_scale_hover($img,hover,unhover = "100%")
+function img_mobile_scale_hover($img,hover,unhover = "101%")
 {
   // Change size when window change size
   $img.css({
