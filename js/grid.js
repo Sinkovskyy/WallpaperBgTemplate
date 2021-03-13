@@ -245,7 +245,6 @@ function upgrade_grid(grid,container,height,width,tpgrid)
 
 
 
-
 $(document).ready(function(){
 
 
@@ -264,10 +263,10 @@ $(document).ready(function(){
 
   // Resize trigger
   $(window).resize(function(){
-
     width = $(window).width();
     height = $(window).height();
-    upgrade_grid(grid,container,height,width);
+    // This fix problem with image height when image in hover state and u change browser size
+    setTimeout(upgrade_grid,400,grid,container,height,width);
   });
 
 
