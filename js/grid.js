@@ -166,7 +166,7 @@ function change_to_two_grid_mobile($grid,$container,height)
   $container.children().children().css({"position":"absolute"});
 
   //Scale image size when hover on them
-  img_mobile_scale_hover($img,"100%");
+  img_mobile_scale_hover($img,"101%");
 }
 
 //Chenge grid size
