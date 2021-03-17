@@ -140,7 +140,7 @@
 }
 .category.menu .scrollmenu
 {
-  height: 400px;
+  max-height: 500px;
 }
 
 .scrollmenu a
