@@ -207,6 +207,7 @@ a>span
    visibility:hidden;
    bottom:60px;
    height: 55px;
+   cursor: pointer;
 }
 
 .upbutton:hover
@@ -217,7 +218,6 @@ a>span
 }
 .upbutton>img:hover
 {
-   cursor: pointer;
    height: 60px;
 }
 
@@ -250,11 +250,6 @@ a>span
   transition: width 0.45s;
 }
 
-.wallpaper.grid img:hover
-{
-  width: 115%;
-  height: auto;
-}
 
 /* Pagination */
 

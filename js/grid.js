@@ -265,8 +265,7 @@ $(document).ready(function(){
   $(window).resize(function(){
     width = $(window).width();
     height = $(window).height();
-    // This fix problem with image height when image in hover state and u change browser size
-    setTimeout(upgrade_grid,400,grid,container,height,width);
+    upgrade_grid(grid,container,height,width);
   });
 
 
