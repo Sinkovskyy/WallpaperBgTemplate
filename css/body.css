@@ -226,6 +226,7 @@ a>span
 
 .wallpaper.grid
 {
+  opacity: 0;
   margin: 0;
   display: grid;
   width: 95%;

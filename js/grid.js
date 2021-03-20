@@ -241,6 +241,7 @@ function upgrade_grid(grid,container,height,width,tpgrid)
           }
       });
   }
+  grid.css({"opacity":"1"});
 }
 
 
