@@ -48,7 +48,6 @@
 .tags-area .tag
 {
   background-color: white;
-  border: none;
   border-radius: 15px;
   border: 1px solid #A52422;
   width: 29%;
@@ -63,9 +62,20 @@
   outline: 0;
 }
 
+
 .tags-area .tag:hover
 {
+  
   border-width: 2px;
+}
+
+@-moz-document url-prefix() {
+  .tags-area .tag:hover
+{
+  
+  border-width: 1px;
+}
+
 }
 
 /* Download button */
