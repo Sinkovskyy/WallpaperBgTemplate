@@ -146,3 +146,24 @@
     width: auto;
   }
 }
+
+
+@media (max-width:500px) {
+
+ 
+  .panel > .button > .category.sort
+  {
+    font-size: 7pt;    
+  }
+
+  .panel > .category.button
+  {
+    font-size: 7pt;  
+  }
+
+  .panel > .sort.button
+  {
+    font-size: 7pt;  
+  }
+
+}
