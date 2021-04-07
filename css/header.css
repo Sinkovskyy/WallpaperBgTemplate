@@ -1,16 +1,16 @@
 @font-face {
   font-family: "ArialRounded";
-  src: url("../fonts/Arial_Rounded_MT.ttf");
+  src: url("../Fonts/Arial_Rounded_MT.ttf");
 }
 
 @font-face {
   font-family: "ArialRoundedBold";
-  src: url("../fonts/Arial_Rounded_MT_Bold.ttf");
+  src: url("../Fonts/Arial_Rounded_MT_Bold.ttf");
 }
 
 @font-face {
   font-family: "ArialRoundedLight";
-  src: url("../fonts/Arial_Rounded_MT_Light.ttf");
+  src: url("../Fonts/Arial_Rounded_MT_Light.ttf");
 }
 
 *
