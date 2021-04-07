@@ -9,5 +9,10 @@
     grid-gap:0px;
   }
 
+  .tags-area .tag
+  {
+    font-size: 10pt;
+  }
+
 
 }
